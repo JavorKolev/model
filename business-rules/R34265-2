@@ -1,0 +1,24 @@
+---
+erp.type: business-rule
+erp.entity: erp.entity
+---
+
+# R34265-1 Warehouse Policies - GS1 SSCC Company Reference
+
+| Name | Value |
+| ---- | ----- |
+| Code | R34265-2 |
+| Entity | Logistics.Wms.WarehousePolicies Entity |
+| Name | GS1 SSCC Company Reference |
+| Attribute | WarehousePolicy.PolicyKind |
+| Layer | Back-End                                        |
+| Events |  |
+| Priority | Normal |
+| Modify | YES |
+| Applicable Legislations | ALL // no condition needed |
+| Action | Validations: 
+| If WarehousePolicy.PolicyKind = null then 'Message'; WarehousePolicy.PolicyKind - should be 8 or 10 Digit, (if GS1 SSCC Company Prefix = 7 digits then (Regular Expression, 10 digits, if GS1 SSCC Company Prefix = 9 digits then (Regular Expression, 8 digits).  If not then 'Message'. 
+| Description |A serial number that is determined by the company and used when generating SSCC codes. It has the function of a counter: for example 0000001, 0000002… . |
+| Message | GS1 SSCC Company Prefix should be 8 or 10 digit | |
+| Introduced In Version | Introduced: 2023<br>Updated: - |
+| Revocable | NO |
