@@ -1,0 +1,24 @@
+---
+erp.type: business-rule
+erp.entity: erp.entity
+---
+
+# R34265-1 Warehouse Policies - GS1 SSCC Company Prefix
+
+| Name | Value |
+| ---- | ----- |
+| Code | R34265-1 |
+| Entity | Logistics.Wms.WarehousePolicies Entity |
+| Name | GS1 SSCC Company Prefix |
+| Attribute | WarehousePolicy.PolicyKind |
+| Layer | Back-End                                        |
+| Events | Planning |
+| Priority | Normal |
+| Modify | YES |
+| Applicable Legislations | ALL // no condition needed |
+| Action | Validations: 
+| If WarehousePolicy.PolicyKindPolicyKind = null then 'Message'; WarehousePolicy.PolicyKindPolicyKind - should be 7 or 9 Digit, If not then 'Message'. (Regular Expression, 7 OR 9 digits) |
+| Description |GS1 SSCC Company Prefix - Specifies the GS1 Company prefix which was given to the company by the national SG1 organization. Used to create SSCC codes.|
+| Message | GS1 SSCC Company Prefix should be 7 or 9 digit |
+| Introduced In Version | Introduced: 2023<br>Updated: - |
+| Revocable | NO |
