@@ -3,7 +3,7 @@ erp.type: business-rule
 erp.entity: Logistics.Wms.WarehouseTransactions
 ---
 
-# R34326 StoreTransaction - Line Product Use Lots
+# R34326 WarehouseTransactions - Line Product Use Lots
 +-------------------+--------------------------------------------------------------------------------------------------+
 | **Code**          | R34326                                                                                           |
 +-------------------+--------------------------------------------------------------------------------------------------+
